@@ -72,6 +72,48 @@ body {
   }
 }
 /**Custom CSS Written **/
+//Generic css classes
+.no-mg-b {
+  margin-bottom: 0;
+}
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+.fl100{
+  float:left;
+  width:100%;
+}
+.max-app-width {
+  max-width: 1280px !important;
+}
+// Some over rides for yeoman css
+.footer,
+.header {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.footer {
+  border: 0 solid;
+}
+.navbar-default {
+  background-color: white;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+.header {
+  border: 0;
+  margin-bottom: 0;
+}
+.navbar-header {
+  padding-left: 20px;
+  .navbar-brand{
+    padding-right:0px;
+  }
+}
+//Animation CSS
 .come-in {
   -webkit-transform: translateY(150px);
   -ms-transform: translateY(150px);
@@ -102,8 +144,44 @@ body {
     transform: translateY(0);
   }
 }
+//Variables for color codes
+$grey-light: #F2F1F2;
+$card-font: #494949;
+$card-sub-font: #6e6e6e;
+$search-border: #e7e7e7;
+$search-icon: #999;
+/*
+Mixins written
+*/
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+//Feature styling
+.search-header {
+  border: 1px solid $search-border;
+  width: 300px;
+  margin: 15px 35px 15px 15px;
+  line-height: 20px;
+  @media screen and (max-width: 768px) {
+width: 150px;
+  }
+  input {
+    border: 0;
+    width: calc(100% - 20px);
+    padding-left:5px;
+  }
+  icon {
+    color: $search-icon;
+    line-height: 20px;
+    margin-right: 6px;
+  }
+}
 .contact-list {
-  background-color: #F2F1F2;
+  background-color: $grey-light;
   padding: 40px;
 }
 .card {
@@ -123,13 +201,20 @@ body {
       bottom: 0;
       z-index: 10;
       width: 100%;
+      color: $card-font;
+      .name {
+        font-size: 14px;
+        color: $card-font;
+      }
+      .email,
+      .phone,
+      .title {
+        font-size: 12px;
+        color: $card-sub-font;
+      }
     }
     .content-ellipsis {
-      text-overflow: ellipsis;
-      width: 100%;
-      display: inline-block;
-      white-space: nowrap;
-      overflow: hidden;
+      @include ellipsis;
     }
     .show-on-hover {
       display: none;
@@ -139,7 +224,7 @@ body {
     .show-on-hover {
       display: block !important;
     }
-    .content-ellipsis{
+    .content-ellipsis {
       white-space: initial;
     }
   }
