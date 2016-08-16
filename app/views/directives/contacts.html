@@ -1,5 +1,7 @@
 <div class="contacts-container">
-  <div ng-if="loading"> Loading</div>
+  <div ng-if="loading" class="col-lg-12 contact-list-loading clearfix" >
+    <div  class="loading"></div>
+  </div>
   <div ng-if="!loading">
     <div class="col-lg-12 contact-list clearfix" >
       <contact-card contact="contact" ng-repeat="contact in contactList"></contact-card>

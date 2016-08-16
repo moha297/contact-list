@@ -1,0 +1,17 @@
+//Variables for color codes
+$grey-light: #F2F1F2;
+$card-font: #494949;
+$card-sub-font: #6e6e6e;
+$search-border: #e7e7e7;
+$search-icon: #999;
+
+/*
+Mixins written
+*/
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+}

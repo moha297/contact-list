@@ -1,0 +1,24 @@
+// Some over rides for yeoman css
+.footer,
+.header {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.footer {
+  border: 0 solid;
+}
+.navbar-default {
+  background-color: white;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+.header {
+  border: 0;
+  margin-bottom: 0;
+}
+.navbar-header {
+  padding-left: 20px;
+  .navbar-brand {
+    padding-right: 0;
+  }
+}
