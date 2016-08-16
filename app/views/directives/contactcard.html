@@ -8,7 +8,7 @@
       <h4 class="name content-ellipsis no-mg-b">
       {{contact.name}}
       </h4>
-      <span class="title content-ellipsis">{{contact.job}} | @ {{contact.company_name}}</span>
+      <span class="title content-ellipsis"><span ng-if="contact.job">{{contact.job}} | </span> @ {{contact.company_name}}</span>
       <span class="phone show-on-hover">Phone Number: {{contact.phone}}</span>
       <a href="mailto:{{contact.email}}" class="show-on-hover email">{{contact.email}}</a>
     </div>

@@ -13,6 +13,7 @@ Navigate to the directory for project
 
 ## Build & development
 Run `grunt` for building and `grunt serve` for preview.
+The application can be seen at http://localhost:9000/#/
 
 ## Testing
 Running `grunt test` will run the unit tests with karma.
