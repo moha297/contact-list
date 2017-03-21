@@ -8,6 +8,7 @@
 // 'test/spec/**/*.js'
 
 //Here we start with exports
+//Adding another comment
 
 module.exports = function (grunt) {
 
